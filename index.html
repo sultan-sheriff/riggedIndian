@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIGGED INDIAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('./assets/bg-image.jpg') center/cover no-repeat;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .hero {
+            position: relative;
+            height: 758px;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 250px;
+                border-radius: 0px;
+            }
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2em 0;
+        }
+
+        .project {
+            width: 30%;
+            margin-bottom: 2em;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact {
+            background: #f9f9f9;
+            padding: 3em 0;
+        }
+
+        .contact button {
+            background: #d9534f;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .logo {
+            height: 125px;
+            width: 125px;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .logo {
+                margin: 0;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+
+            li {
+                margin-right: 20px;
+            }
+
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+                font-size: 24px;
+                margin-left: auto; /* Push the menu icon to the right */
+                padding: 10px;
+            }
+
+            .menu-icon::before {
+                content: "\2261"; /* Unicode character for three horizontal lines */
+            }
+
+            ul.collapsible {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #fff; /* Adjust background color as needed */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            ul.collapsible.open {
+                display: flex;
+                padding-left: 10px;
+                padding-top: 10px 
+            }
+
+            li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+
+        .heading {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0093cb;
+        }
+
+        .body-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+
+        /* .about-content{
+            max-width: 600px;
+        } */
+
+        /* Add the following styles to your existing CSS */
+
+        .portfolio-container {
+            max-width: 1248px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 24px;
+            padding-left: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 767px) {
+            .portfolio-container {
+                padding-right: 20px;
+                /* Adjusted padding for smaller screens */
+                padding-left: 20px;
+                /* Adjusted padding for smaller screens */
+            }
+        }
+
+        .port-wrapper-m {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .port-title.centered {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        .portfolio-images {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .port-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .port-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .service-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .service-row {
+            display: flex;
+            margin: 0 -10px;
+            /* Adjust margin to provide spacing between columns */
+        }
+
+        .service-item {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            /* Adjust margin to provide spacing between columns */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (max-width: 767px) {
+        .service-row {
+            flex-direction: column; /* Change to column layout for smaller screens */
+        }
+
+        .service-item {
+            margin-bottom: 20px; /* Add space between service items on smaller screens */
+        }
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .section-heading {
+            font-size: 3em;
+            color: #0093cb;
+            margin-bottom: 20px;
+        }
+
+        .services-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 1248px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 24px;
+            padding-left: 24px;
+        }
+        @media screen and (max-width: 767px) {
+            .contact-container {
+                padding-right: 16px;
+                /* Adjusted padding for smaller screens */
+                padding-left: 16px;
+                /* Adjusted padding for smaller screens */
+            }
+        }
+
+        .contact-wrapper-m {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .contact-section-title {
+            width: 50%;
+            margin-bottom: 48px;
+        }
+
+        @media screen and (max-width: 767px) {
+        .contact-section-title,.contact-section-title.centered {
+            width: 100%
+            }
+        }
+
+        .l-g-2-col {
+            grid-column-gap: 24px;
+            grid-row-gap: 24px;
+            -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            -ms-grid-rows: auto;
+            grid-template-rows: auto;
+        }
+
+        .w-layout-grid {
+            display: -ms-grid;
+            display: grid;
+            grid-auto-columns: 1fr;
+            -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            -ms-grid-rows: auto auto;
+            grid-template-rows: auto auto;
+            grid-row-gap: 16px;
+            grid-column-gap: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .w-layout-grid {
+                grid-template-columns: 1fr; /* Change to a single column layout for smaller screens */
+            }
+        }
+
+        .w-list-unstyled {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        @media (max-width: 768px){
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .icon-list-item {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: .25rem;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        .s-p-x-48 {
+            padding-right: 48px;
+            padding-left: 48px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .s-p-x-48 {
+                padding-left: 0px;
+                padding-right: 10px;
+            }
+        }
+
+        .s-m-t-24 {
+            margin-top: 24px;
+        }
+
+        .w-form {
+            margin: 0 0 15px;
+        }
+
+        .input.medium {
+            height: 48px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            box-shadow: inset 1px 1px 2px 0 rgba(0, 0, 0, .15);
+            -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+            color: #555;
+        }
+
+        .w-input,
+        .w-select {
+            display: block;
+            width: 100%;
+            height: 38px;
+            padding: 8px 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            vertical-align: middle;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        form {
+            display: block;
+            margin-top: 0em;
+        }
+
+        .w-form-done {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            background-color: #ddd;
+        }
+
+        .w-form-fail {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ffdede;
+        }
+
+        .about-container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        
+        @media (max-width: 767px) {
+            .about-container {
+                flex-direction: column; /* Change to column layout for smaller screens */
+                padding-right: 16px; /* Adjusted padding for smaller screens */
+                padding-left: 16px; /* Adjusted padding for smaller screens */
+            }
+
+            .about-content {
+                padding-right: 0; /* Reset padding */
+                padding-left: 0; /* Reset padding */
+                margin-bottom: 20px; /* Add space between content and image on smaller screens */
+            }
+
+            img {
+                max-width: 100%; /* Ensure the image is responsive */
+                height: auto; /* Maintain the aspect ratio of the image */
+            }
+        }
+
+
+
+        .about-content {
+            flex: 1;
+            padding-right: 20px;
+            /* Adjust as needed for spacing between text and image */
+        }
+
+        .menu-list {
+            text-decoration: none;
+            color: #0093cb
+        }
+
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scrollToTop img {
+            width: 40px; /* Adjust the icon size as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("click", function (event) {
+            var menu = document.querySelector('.collapsible');
+            var menuIcon = document.querySelector('.menu-icon');
+
+            // Check if the clicked element is inside the menu or the menu icon
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove('open');
+                }
+        });
+
+        function toggleMenu() {
+            var menu = document.querySelector('.collapsible');
+            menu.classList.toggle('open');
+        }
+
+    </script>
+
+    <div class="container">
+        <img src="assets/logo.png" alt="Rigged Indian Logo" class="logo">
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()"></div>
+            <ul class="collapsible">
+                <li class="body-text"><a href="#about" class="menu-list">About Us</a></li>
+                <li class="body-text"><a href="#services" class="menu-list">Services</a></li>
+                <li class="body-text"><a href="#portfolio" class="menu-list">Portfolio</a></li>
+                <li class="body-text"><a href="#video" class="menu-list">Our Work</a></li>
+                <li class="body-text"><a href="#contact" class="menu-list">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="hero">
+            <video autoplay loop muted>
+                <source src="assets/CHess Compilation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <section class="services-section" id="services">
+        <div class="service-container">
+            <h2 class="section-heading">Our Services</h2>
+            <div class="service-row">
+                <div class="service-item">
+                    <h3 class="heading">Creative Development</h3>
+                    <p class="body-text">We provide professional creative development services for production of feature
+                        films, shorts and commercials according to your requirements. We also develop entire creative
+                        concepts and make this process easy for you through every step of production.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="heading">Animation and Motion Design</h3>
+                    <p class="body-text">Are you looking for a team of experts to meet your animation needs? Look no
+                        further. We are a team of seasoned animators who go above and beyond to provide quality service
+                        and amazing 2D / 3D animations and motion design as well.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="heading">Visual Effects</h3>
+                    <p class="body-text">We create high quality content in a range of visual effects from fire to smoke,
+                        explosions and other cgi with the highly acclaimed Houdini software package. We strive to create
+                        campaigns that will help you stand out from the crowd.</p>
+                </div>
+            </div>
+        </div>
+        <div class="service-container" style="padding-top: 20px;">
+            <div class="service-row">
+                <div class="service-item">
+                    <h3 class="heading">CGI Renderings</h3>
+                    <p class="body-text">We are experts in rendering with over 10 years of experience and countless
+                        finished projects. We will adjust the software to the needs and complexity of your project,
+                        allowing us to easily provide custom CGI animations and stills.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="heading">Post Production</h3>
+                    <p class="body-text">Our talented team of colourists and artists apply their creative vision to
+                        perfect your images.</p>
+                </div>
+                <div class="service-item">
+                    <h3 class="heading">Mastering & Deliverables</h3>
+                    <p class="body-text">Our mastering and deliverables services are highly automated, with precise
+                        quality control at every step. We offer industry-standard deliverables including: DCPs (Digital
+                        Cinema Packages), IMFs (Interoperable Master Format), custom deliverables based on client
+                        specifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section" id="video">
+        <h2 class="section-heading" style="text-align: center;">Our Work</h2>
+        <div class="container">
+            <div class="hero">
+                <video id="videoPlayer" loop muted>
+                    <source src="assets/featured/KFC Periamedu.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div>
+                    <div class="nav-arrow left-arrow" onclick="prevVideo()">&#9664;</div>
+                    <div class="nav-arrow right-arrow" onclick="nextVideo()">&#9654;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            color: #0093cb;
+            padding: 8px;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+    
+        .nav-arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .left-arrow {
+                left: 85px; /* Adjust the left value for mobile phones */
+            }
+            .right-arrow {
+                right: 85px; /* Adjust the left value for mobile phones */
+            }
+        }
+
+        /* Laptops and Desktops */
+        @media only screen and (min-width: 768px) {
+            .left-arrow {
+                left: 200px; /* Adjust the left value for mobile phones */
+            }
+            .right-arrow {
+                right: 200px; /* Adjust the left value for mobile phones */
+            }
+        }
+        #videoPlayer {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+    
+    <script>
+        var videos = [
+            "assets/featured/KFC Periamedu.mp4",
+            "assets/featured/Pantaloons Eoss Final WT.mp4",
+            "assets/featured/KFC adyar slomo.mp4",
+            "assets/featured/beach lighthouse stokes.mp4",
+            "assets/featured/Preethi Instagram Final.mp4",
+            "assets/featured/varata 2nd edition.mp4",
+            "assets/featured/Pantaloons final Instagram.mp4",
+            "assets/featured/Thambi Sendoff.mp4",
+            "assets/featured/Shyaway End revised.mp4",
+            "assets/featured/Delhi Winter Launch.mp4"
+            // Add more video URLs as needed
+        ];
+    
+        var currentVideoIndex = 0;
+        var videoPlayer = document.getElementById("videoPlayer");
+        videoPlayer.play();
+    
+        function loadVideo(index) {
+            if (index >= 0 && index < videos.length) {
+                videoPlayer.src = videos[index];
+                videoPlayer.load();
+                currentVideoIndex = index;
+            }
+        }
+    
+        function nextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            loadVideo(currentVideoIndex);
+            videoPlayer.play(); // Start playing the next video
+        }
+    
+        function prevVideo() {
+            currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+            loadVideo(currentVideoIndex);
+            videoPlayer.play(); // Start playing the previous video
+        }
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') {
+                prevVideo();
+            } else if (event.key === 'ArrowRight') {
+                nextVideo();
+            }
+        });
+    </script>
+    
+    <section class="portfolio-section" id="portfolio">
+        <div class="portfolio-container">
+            <div class="port-wrapper-m">
+                <div class="port-title.centered">
+                    <h2 class="heading">Rigged Indian is story-first and technology forward &nbsp;postproduction company
+                    </h2>
+                </div>
+            </div>
+            <div class="portfolio-images">
+                <!-- <div class="port-item port1">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/aachi logo.png" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="port-item port2">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/Kfc logo.png" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div> -->
+                <div class="port-item port11">
+                    <img src="assets/portfolio/csk logo.jpg" alt="3D">
+                </div>
+                <div class="port-item port5">
+                    <img src="assets/portfolio/Maruti-Suzuki-Logo-2011.png" alt="3D">
+                </div>
+                <div class="port-item port3">
+                    <img src="assets/portfolio/Kfc logo.png" alt="3D">
+                </div>
+                <div class="port-item port1">
+                    <img src="assets/portfolio/aachi logo.png" alt="3D">
+                </div>
+                <div class="port-item port4">
+                    <img src="assets/portfolio/marina mall logo.jpg" alt="3D">
+                </div>
+                <!-- <div class="port-item port4">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/Preethi Instagram Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="port-item port5">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/KFC Periamedu.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div> -->
+                <div class="port-item port6">
+                    <img src="assets/portfolio/max logo.jpg" alt="3D">
+                </div>
+                <div class="port-item port7">
+                    <img src="assets/portfolio/pizza hut logo.png" alt="3D">
+                </div>
+                <div class="port-item port8">
+                    <img src="assets/portfolio/preethi logo.png" alt="3D">
+                </div>
+                <!-- <div class="port-item port7">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/varata 2nd edition.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="port-item port8">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/Pantaloons Eoss Final WT.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div> -->
+                <div class="port-item port9">
+                    <img src="assets/portfolio/tridom logo.jpg" alt="3D">
+                </div>
+                <div class="port-item port10">
+                    <img src="assets/portfolio/vurve salon.jpg" alt="3D">
+                </div>
+                <!-- <div class="port-item port10">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/Delhi Winter Launch.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="port-item port11">
+                    <div class="video-wrapper">
+                        <video class="hover-video" width="100%" height="100%" autoplay loop muted>
+                            <source src="assets/portfolio/beach lighthouse stokes.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div> -->
+                <div class="port-item port12">
+                    <img src="assets/portfolio/serve.jpeg" alt="3D">
+                </div>
+                <div class="port-item port12">
+                    <img src="assets/portfolio/pantaloons.jpeg" alt="3D">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h1 class="heading">We are a full-service post production facility located in the heart of India,
+                    Chennai.</h1>
+                <p class="body-text">Welcome to Rigged Indian, your premier destination for cutting-edge VFX
+                    and CGI services that elevate brand visibility in the digital realm. At Rigged
+                    Indian, we specialize in producing high-quality CGI videos that transcend
+                    conventional boundaries, bringing your brand to life with visually stunning
+                    and immersive content.
+                    Founded and guided by the visionary Amir Khan, Rigged Indian brings
+                    together a passionate team dedicated to pushing the boundaries of
+                    creativity and technical excellence.
+                    coupled with a childhood passion for gaming, Amir Khan has paved the way
+                    for him to become a skilled VFX artist. Over a decade of relentless
+                    self-learning, Amir has honed his craft, transforming enthusiasm into
+                    unparalleled expertise.
+                    Collaborating with Amir is Syed Abrar, Amir's childhood friend armed with a
+                    background in Petrochemical Engineering. Under Amir's mentorship, Abrar
+                    not only acquires technical prowess in the world of VFX but also
+                    contributes his creativity as a content creator. Together, they form a
+                    dynamic duo committed to delivering CGI videos that captivate and
+                    resonate with digital audiences.
+                    At the forefront of our social operations is Abdul Razack, an accomplished
+                    electrical engineer, strategically positioning Rigged Indian as a prominent
+                    presence in the digital sphere. Our team is united by a shared passion and
+                    commitment to excellence, propelling Rigged Indian to the forefront of
+                    innovation in the VFX and CGI industry.</p>
+            </div>
+            <img src="assets/about.jpeg" alt="Image Description" style="max-width: 100%;
+            height: auto;
+            max-height: 525px; /* Adjust the maximum height as needed */
+            border-radius: 8px;
+            padding-top: 150px;">
+        </div>
+    </section>
+
+    <script>
+        function formDetails(){
+            let mes = document.getElementById("Message");
+            let name = document.getElementById("Name");
+            let email = document.getElementById("Email");
+            let phne = document.getElementById("Phone");
+            fetch('http://localhost:3000/riggedIndian', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "Message": mes.value , "Name": name.value, "Email":email.value, "Phone":phne.value})
+            })
+            .then(response => response.json())
+            .then(response => console.log(JSON.stringify(response)))
+            mes.value = ""
+            name.value = ""
+            email.value = ""
+            phne.value = ""
+        }
+    </script>
+
+    <section class="contact-section" id="section">
+        <div class="contact-container">
+            <div class="contact-wrapper-m">
+                <div class="contact-section-title">
+                    <h2 class="heading">Let’s create something great together.</h2>
+                    <p class="body-text">Our main focus is to deliver the best quality work, on time and within budget.
+                        We would love the opportunity to collaborate with you on your next production.</p>
+                </div>
+                <div class="w-layout-grid l-g-2-col lt-g-1-col">
+                    <div>
+                        <h3 class="heading">Our Office</h3>
+                        <div class="w-layout-grid l-g-2-col">
+                            <div>
+                                <h4 class="heading">India, Chennai</h4>
+                                <ul role="list" class="w-list-unstyled">
+                                    <li class="icon-list-item">
+                                        <a>
+                                            <div class="body-text">Plot No.8, NR 40 Feet</div>
+                                        </a>
+                                    </li>
+                                    <li class="icon-list-item">
+                                        <a>
+                                            <div class="body-text">Ayyan Thiruvallur Salai Indra Nagar Extin,</div>
+                                        </a>
+                                    </li>
+                                    <li class="icon-list-item">
+                                        <a>
+                                            <div class="body-text">Puthagaram, Chennai:600099 </div>
+                                        </a>
+                                    </li>
+                                    <li class="icon-list-item">
+                                        <a>
+                                            <div class="body-text">Phone Number: +91 97911 21798, +91 88072 00764 </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-p-x-48">
+                        <h3 class="heading">Send us a message</h3>
+                        <p class="body-text"> If you have a brief that you’d like to talk to us about, get in touch.</p>
+                        <div class="s-m-t-24 w-form">
+                            <form>
+                                <input type="text" class="input medium w-input" maxlength="256" name="Name"
+                                    data-name="Name 2" placeholder="Full Name" id="Name" required="">
+                                <input type="email" class="input medium w-input" maxlength="256" name="Email"
+                                    data-name="Email 2" placeholder="E-mail" id="Email" required="">
+                                <input type="tel" class="input medium w-input" maxlength="256" name="Phone"
+                                    data-name="Phone 2" placeholder="Phone" id="Phone">
+                                <textarea placeholder="Message" maxlength="5000" id="Message" name="Message"
+                                    data-name="Message 2" required="" class="input textarea w-input"></textarea>
+                                <button type="submit" value="Send" data-wait="Please wait..."
+                                    class="button medium form-button w-button" onclick="formDetails()">Send
+                                </button>
+                            </form>
+                            <div style="display: none;">Thank you! Your submission has been received!</div>
+                            <div style="display: none;">Oops! Something went wrong while submitting the form.</div>
+                            <!-- <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success">
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 40px; /* Adjust the height as needed */
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-social a {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .footer-social img {
+            height: 35px; /* Adjust the height of the Instagram icon */
+            margin-right: 5px;
+        }
+
+        .footer-address {
+            text-align: left;
+        }
+        @media only screen and (max-width: 767px) {
+        .footer-social {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .footer-social a {
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+    }
+    </style>
+    <footer>
+        <div class="container">
+            <!-- Copyright message at the right corner -->
+            <p class="footer-address">&copy; 2024 CGI Company. All rights reserved.</p>
+
+            <!-- Follow us on Instagram -->
+            <div class="footer-social">
+                <a href="https://www.instagram.com/riggedindian" target="_blank">
+                    <img src="assets/instagram.png" alt="Instagram Icon">
+                    Follow us on Instagram
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
